@@ -1,0 +1,64 @@
+public class Main {
+
+   public static void main(String[] args) {
+       Rectangle rectangle = new Rectangle(10.5,5.0);
+
+      
+        System.out.println("Comprimento: " + rectangle.getLength());
+        System.out.println("Largura: " + rectangle.getWidth());
+
+     
+        System.out.println("Perímetro: " + rectangle.calculatePerimeter());
+        System.out.println("Área: " + rectangle.calculateArea());
+        
+  
+    }
+    
+}
+
+
+
+public class Rectangle {
+    
+    private double length = 1.0;
+    private double  width = 1.0;
+    private double area;
+   
+    
+    public Rectangle (double lenght, double widht){
+    this.length = 1.0;
+    this.width = 1.0;
+    }
+    
+    public double getLength() {
+        return length;
+    }
+
+   public void setLength(double length) {
+        if (length > 0.0 && length < 20.0) {
+            this.length = length;
+        } else {
+            System.out.println("Comprimento inválido.");
+        }
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        if (width > 0.0 && width < 20.0) {
+            this.width = width;
+        } else {
+            System.out.println("Largura inválida.");
+        }
+    }
+    public double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+
+    public double calculateArea() {
+        return length * width;
+    }
+}
+
